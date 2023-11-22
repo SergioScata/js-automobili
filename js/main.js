@@ -103,21 +103,22 @@ function AddAuto(event){
     let nuovaAlimentazione= document.getElementById("Alimentazione").value;
 
 
-    let newAuto= {
+    let newAuto = {
         marca: nuovaMarca,
         modello: nuovoModello,
         alimentazione: nuovaAlimentazione
-    }
+    };
 
     automobili.push(newAuto);
-
+    console.log(newAuto);
+    
     let nuovaCard= `<div class="card">
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">${nuovaMarca}</li>
-      <li class="list-group-item">${nuovoModello}</li>
-      <li class="list-group-item">${nuovaAlimentazione}</li>
+      <li class="list-group-item">${newAuto.marca}</li>
+      <li class="list-group-item">${newAuto.modello}</li>
+      <li class="list-group-item">${newAuto.alimentazione}</li>
     </ul>
-  </div>`
+  </div>`;
 
   document.getElementById("containerrow").innerHTML += nuovaCard;
 }
