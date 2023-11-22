@@ -121,4 +121,13 @@ function AddAuto(event){
   </div>`;
 
   document.getElementById("containerrow").innerHTML += nuovaCard;
-}
+
+  switch(nuovaAlimentazione){
+     case 'Benzina': AutoBenzina.push(newAuto)
+          break;
+          case 'Diesel': AutoDiesel.push(newAuto)
+          break;
+     default :
+          break;
+  }
+};
