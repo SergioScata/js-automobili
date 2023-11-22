@@ -95,4 +95,29 @@ for (let i= 0; i< AltreAuto.length; i++){
 }
 
 
-document.getElementById
+function AddAuto(event){
+    event.preventDefault();
+
+    let nuovaMarca= document.getElementById("Marca").value;
+    let nuovoModello= document.getElementById("Modello").value;
+    let nuovaAlimentazione= document.getElementById("Alimentazione").value;
+
+
+    let newAuto= {
+        marca: nuovaMarca,
+        modello: nuovoModello,
+        alimentazione: nuovaAlimentazione
+    }
+
+    automobili.push(newAuto);
+
+    let nuovaCard= `<div class="card">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">${nuovaMarca}</li>
+      <li class="list-group-item">${nuovoModello}</li>
+      <li class="list-group-item">${nuovaAlimentazione}</li>
+    </ul>
+  </div>`
+
+  document.getElementById("containerrow").innerHTML += nuovaCard;
+}
